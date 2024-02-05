@@ -1,0 +1,56 @@
+<form
+	hx-post="/update/{{ task.id }}"
+	method="post"
+	class="update">
+	<h2 class="">Create a New Task</h2>
+	<!-- title -->
+	<div class="fields">
+		<label for="title">Title</label>
+		<input
+			type="text"
+			id="title"
+			name="title"
+			value="{{ task.title }}"
+			required />
+	</div>
+	<!-- description -->
+	<div class="fields">
+		<label for="description">Description</label>
+		<textarea
+			id="description"
+			name="description"
+      rows="8"
+			required>
+{{ task.description }}
+      </textarea
+		>
+	</div>
+	<!-- due date -->
+	<div class="fields">
+		<label for="due_date">Due Date</label>
+		<input
+			id="due_date"
+			name="due_date"
+			required
+			value="{{ task.due_date }}"
+			type="date" />
+	</div>
+	<!-- completed -->
+	<div class="status">
+		<label for="completed">Completed</label>
+		{% if task.completed %}
+		<input
+			type="checkbox"
+			name="completed"
+			checked />
+		{% else %}
+		<input
+			type="checkbox"
+			name="completed" />
+		{% endif %}
+	</div>
+	<!-- submit -->
+	<div class="">
+		<button class="">Update</button>
+	</div>
+</form>

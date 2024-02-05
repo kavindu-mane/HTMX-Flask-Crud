@@ -1,0 +1,136 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: white;
+	padding: 20px;
+	height: 100vh;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	color: rgb(19, 88, 134);
+	margin-bottom: 20px;
+}
+
+button {
+	padding: 8px 40px;
+	border: 1px solid rgb(19, 88, 134);
+	border-radius: 5px;
+	background-color: #526d82;
+	color: white;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgb(19, 88, 134);
+	color: white;
+}
+
+textarea {
+	resize: vertical !important;
+}
+
+.target {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.creator {
+	padding-top: 30px;
+}
+
+.creator small,
+.creator a {
+	text-decoration: none;
+	color: #838181;
+}
+
+.read,
+.create,
+.update {
+	margin-top: 50px;
+	max-width: 600px;
+	width: 100%;
+}
+
+.create {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.create .fields,
+.update .fields {
+	display: flex;
+	flex-direction: column;
+	gap: 5px 0;
+	width: 100%;
+}
+
+.create input,
+.create textarea,
+.update input,
+.update textarea {
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #00000066;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.update .status {
+	display: flex;
+	align-items: center;
+	gap: 0 10px;
+	margin-bottom: 10px;
+}
+.update .status input[type="checkbox"],
+.update .status label {
+	width: fit-content;
+	height: fit-content;
+	margin: 0%;
+}
+
+.read-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 20px 0;
+}
+.read-cards .card {
+	padding: 20px;
+	border: 1px solid #00000022;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px #00000033;
+}
+
+.read-cards .buttons {
+	display: flex;
+	justify-content: end;
+	margin-top: 10px;
+	gap: 0 10px;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: rgb(19, 88, 134);
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: rgb(19, 88, 134);
+}

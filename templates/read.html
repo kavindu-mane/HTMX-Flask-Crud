@@ -1,0 +1,28 @@
+<div class="read">
+	<h2 class="">Task Lisk</h2>
+	<div class="read-cards">
+		{% for task in tasks %}
+		<div class="card">
+			<h3 class="">{{ task.title }}</h3>
+			<p class="">{{ task.description }}</p>
+			<p class="">Due Date : {{ task.due_date }}</p>
+			<p class="">Completed : {{ task.completed }}</p>
+			<div class="buttons">
+				<button
+					class=""
+					hx-get="/update/{{ task.id }}"
+					hx-target="#target">
+					Edit
+				</button>
+				<button
+					class=""
+					hx-delete="/delete/{{ task.id }}"
+					hx-confirm="Are you sure?"
+					hx-target="#target">
+					Delete
+				</button>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
